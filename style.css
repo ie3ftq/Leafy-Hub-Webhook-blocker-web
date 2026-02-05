@@ -1,0 +1,78 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0b0b0b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #00ff9c, #6c63ff, #ff4ecd);
+  filter: blur(140px);
+  opacity: 0.25;
+  animation: move 12s infinite alternate;
+}
+
+@keyframes move {
+  from { transform: translate(-20%, -20%); }
+  to { transform: translate(-60%, -60%); }
+}
+
+.card {
+  position: absolute;
+  background: rgba(255,255,255,0.08);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,255,156,0.3);
+  width: 420px;
+  transition: all 0.6s ease;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card p { opacity: 0.8; margin-bottom: 30px; }
+
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #00ff9c;
+  color: black;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+button:hover { transform: scale(1.08); box-shadow: 0 0 25px #00ff9c; }
+
+button.ghost {
+  background: transparent;
+  color: white;
+  border: 2px solid #00ff9c;
+}
+
+button.ghost:hover { background: #00ff9c; color: black; }
+
+pre {
+  background: #000;
+  color: #00ff9c;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  overflow-x: auto;
+  user-select: all;
+}
